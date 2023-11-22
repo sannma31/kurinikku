@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>松延クリニック</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            background-color: #333;
+            padding: 10px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+
+        section {
+            padding: 20px;
+        }
+
+        footer {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        #map {
+            height: 300px;
+            width: 100%;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .contact-info div {
+            width: 30%;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+            margin: auto;
+        }
+
+        form input,
+        form textarea,
+        form select {
+            margin-bottom: 10px;
+            padding: 8px;
+        }
+
+        form button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        #clinic-info {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        #clinic-info div {
+            width: 30%;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>松延クリニック</h1>
+    </header>
+
+    <nav>
+        <a href="home.html">ホーム</a>
+        <a href="hospital.html">診療科目</a>
+        <a href="staffu.html">スタッフ</a>
+        <a href="map.html">アクセス</a>
+        <a href="#">予約</a>
+    </nav>
+
+    <section>
+        <h2>お問い合わせ</h2>
+
+        <div class="contact-info">
+            <div>
+                <h3>電話番号</h3>
+                <p>012-3456-7890</p>
+            </div>
+            <div>
+                <h3>営業時間</h3>
+                <p>月曜 - 金曜: 9:00 - 18:00</p>
+            </div>
+        </div>
+
+        <div id="clinic-info">
+            <div>
+                <h3>〒587-0002</h3>
+                <p>大阪府堺市美原区黒山419-1</p>
+            </div>
+            <div>
+                <h3>電話番号</h3>
+                <p>TEL：072-361-8181</p>
+            </div>
+            <div>
+                <h3>FAX</h3>
+                <p>FAX：072-361-8188</p>
+            </div>
+        </div>
+
+        <div class="contact-info">
+            <div>
+                <h3>診療時間</h3>
+                <p>月～土 9:00～12:00</p>
+                <p>月火水金 16:00～18:00</p>
+            </div>
+            <div>
+                <h3>受付時間</h3>
+                <p>月～土 8:30～11:30</p>
+                <p>月火水金 15:45～17:30</p>
+            </div>
+            <div>
+                <h3>休診日</h3>
+                <p>木曜、土曜午後・日曜日・祝祭</p>
+            </div>
+        </div>
+
+        <div id="map"></div>
+
+        <form>
+            <label for="name">お名前</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">メールアドレス</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">メッセージ</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit">送信</button>
+        </form>
+    </section>
+
+    <footer>
+        &copy; 2023 松延クリニック
+    </footer>
+
+    <script>
+        function initMap() {
+            var clinicLocation = { lat: 34.5142, lng: 135.5469 }; // Replace with actual coordinates
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 15,
+                center: clinicLocation
+            });
+            var marker = new google.maps.Marker({
+                position: clinicLocation,
+                map: map,
+                title: '松延クリニック'
+            });
+        }
+    </script>
+
+    <script defer src="hAIzaSyAowzMPejNJE9AzMQL5T6DhB8Lz6KhT80M"></script>
+
+</body>
+</html>
