@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>松延クリニック</title>
+    <!-- Add Bootstrap CDN link -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
         body {
             font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -61,41 +64,62 @@
         }
     </style>
 </head>
+
 <body>
 
-    <header>
+    <header class="bg-success">
         <h1>松延クリニック</h1>
     </header>
 
-    <nav>
-        <a href="home.html">ホーム</a>
-        <a href="hospital.html">診療科目</a>
-        <a href="staffu.html">スタッフ</a>
-        <a href="map.html">アクセス</a>
-        <a href="#">予約</a>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="home.html">ホーム</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="hospital.html">診療科目</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="staffu.html">スタッフ</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="map.html">アクセス</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="yoyaku.html">予約</a>
+                </li>
+            </ul>
+        </div>
     </nav>
 
     <section>
-        <h2>ホーム</h2>
+        <h2 class="text-success">ホーム</h2>
         <p>正確な診療、わかりやすい説明、気さくで話しやすいクリニック</p>
         <p>松延クリニックへようこそ！</p>
 
-        <div style="background-color: #4CAF50; color: white; padding: 20px; margin-top: 20px;">
-            <p style="font-size: 20px; font-weight: bold;">I support the smile of people</p>
+        <div class="bg-success text-white p-4 mt-4">
+            <p class="font-weight-bold" style="font-size: 20px;">I support the smile of people</p>
             <p>皆様の笑顔をこれからも応援してまいります！</p>
             <p>お子様からお年寄りまで地域の皆様に、わかりやすく信頼される医療提供を目標としております。</p>
         </div>
 
-        <div style="background-color: #f4f4f4; padding: 20px; margin-top: 20px; text-align: left;">
+        <div class="bg-light p-4 mt-4 text-left">
             <p>これまで、多くの患者様の様々な症状に対して携わってまいりました。「患者さんにとって本当に喜んでいただける医療。そして安心して相談いただけるかかりつけ医」を目標として川口クリニックは皆様に適した治療や相談を行っていきたいと思います。内科　整形外科　婦人科　リハビリテーション科を専門としていますが、専門外の領域に関しましても、これまでの様々な現場での経験を生かして、広く皆様のお役に立ってゆきたいと思います。お気軽にご相談、ご来院ください。</p>
         </div>
     </section>
 
-    <footer>
+    <footer class="bg-success text-white">
         &copy; 2023 松延クリニック
     </footer>
+
+    <!-- Include Bootstrap JS and Popper.js -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
     <!-- Include any necessary scripts for the home page here -->
 
 </body>
+
 </html>
