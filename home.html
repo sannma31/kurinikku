@@ -9,24 +9,29 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
         body {
-            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
+            background-color: #f8f9fa;
+            color: #495057;
         }
 
         header {
             background-color: #4CAF50;
             color: white;
-            padding: 20px;
+            padding: 40px 20px;
             text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 0;
         }
 
         nav {
             display: flex;
             justify-content: center;
-            background-color: #333;
+            background-color: #343a40;
             padding: 10px;
         }
 
@@ -54,6 +59,42 @@
 
         p {
             font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .bg-success {
+            background-color: #28a745;
+            color: white;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        .bg-light {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        .medical-service {
+            margin-bottom: 30px;
+        }
+
+        .card {
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+
+        .card-header {
+            background-color: #007bff;
+            color: white;
+            border-radius: 5px 5px 0 0;
+        }
+
+        #map {
+            height: 100px;
+            border-radius: 10px;
         }
 
         footer {
@@ -67,7 +108,7 @@
 
 <body>
 
-    <header class="bg-success">
+    <header>
         <h1>松延クリニック</h1>
     </header>
 
@@ -81,20 +122,17 @@
                     <a class="nav-link" href="hospital.html">診療科目</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="staffu.html">スタッフ</a>
-                </li>
-                <li class="nav-item">
                     <a class="nav-link" href="map.html">アクセス</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="yoyaku.html">予約</a>
+                    <a class="nav-link" href="https://miharakawa-cl.mdja.jp/">予約</a>
                 </li>
             </ul>
         </div>
     </nav>
 
     <section>
-        <h2 class="text-success">ホーム</h2>
+        <h2>ホーム</h2>
         <p>正確な診療、わかりやすい説明、気さくで話しやすいクリニック</p>
         <p>松延クリニックへようこそ！</p>
 
@@ -108,8 +146,96 @@
             <p>これまで、多くの患者様の様々な症状に対して携わってまいりました。「患者さんにとって本当に喜んでいただける医療。そして安心して相談いただけるかかりつけ医」を目標として川口クリニックは皆様に適した治療や相談を行っていきたいと思います。内科　整形外科　婦人科　リハビリテーション科を専門としていますが、専門外の領域に関しましても、これまでの様々な現場での経験を生かして、広く皆様のお役に立ってゆきたいと思います。お気軽にご相談、ご来院ください。</p>
         </div>
     </section>
+    <section>
+        <h2>診療科目</h2>
 
-    <footer class="bg-success text-white">
+        <div class="medical-services row">
+            <div class="medical-service col-md-6">
+                <h3>肺炎予防ワクチン</h3>
+                <p>肺炎予防ワクチンは、高齢者や免疫不全状態の方にお勧めされる予防接種です。このワクチンは肺炎の重症化を予防し、健康な生活をサポートします。</p>
+            </div>
+            <div class="medical-service col-md-6">
+                <h3>内科</h3>
+                <p>内科は身体の内部疾患に焦点を当て、心臓や肺、消化器系などの病気に対処します。一般的な症状から慢性的な疾患まで、包括的な医療サービスを提供しています。</p>
+            </div>
+            <div class="medical-service col-md-6">
+                <h3>整形外科</h3>
+                <p>整形外科は骨や関節、筋肉などの運動器系の障害や疾患に対する治療を行います。怪我や骨折、関節痛に悩む患者に対して、的確な治療とリハビリテーションを提供しています。</p>
+            </div>
+            <div class="medical-service col-md-6">
+                <h3>リハビリテーション科</h3>
+                <p>リハビリテーション科は病気やけがによる機能障害や障がいに対するリハビリテーションを専門としています。患者が最大限の機能を取り戻し、生活の質を向上させるサポートを提供しています。</p>
+            </div>
+            <div class="medical-service col-md-6">
+                <h3>婦人科</h3>
+                <p>婦人科は女性の健康に焦点を当て、妊娠、出産、婦人病などに関する診断と治療を行います。健康な妊娠から更年期まで、女性の生涯を支える総合的な医療が提供されています。</p>
+            </div>
+            <!-- 他の診療科目も同様に追加 -->
+        </div>
+    </section>
+    <div class="container mt-4">
+        <div class="card">
+            <div class="card-header bg-info text-white">
+                <h5 class="mb-0">クリニックの場所</h5>
+            </div>
+            <div class="card-body">
+                <!-- Replace the iframe with a div for Leaflet map -->
+                <div id="map" class="mb-4"></div>
+
+                <!-- Add your Google Maps iframe here -->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3286.6754727294765!2d135.55708037563497!3d34.536449192008455!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000d9d46b99b1b9%3A0x7aa8464b224b585f!2z44CSNTg3LTAwMDIg5aSn6Ziq5bqc5aC65biC576O5Y6f5Yy66buS5bGx77yU77yR77yZ4oiS77yR!5e0!3m2!1sja!2sjp!4v1702369353285!5m2!1sja!2sjp" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+            </div>
+        </div>
+    </div>
+    <section>
+        <h2>お問い合わせ</h2>
+
+        <div class="contact-info">
+            <div>
+                <h3>電話番号</h3>
+                <p>012-3456-7890</p>
+            </div>
+            <div>
+                <h3>営業時間</h3>
+                <p>月曜 - 金曜: 9:00 - 18:00</p>
+            </div>
+        </div>
+
+        <div id="clinic-info">
+            <div>
+                <h3>〒587-0002</h3>
+                <p>大阪府堺市美原区黒山419-1</p>
+            </div>
+            <div>
+                <h3>電話番号</h3>
+                <p>TEL：072-361-8181</p>
+            </div>
+            <div>
+                <h3>FAX</h3>
+                <p>FAX：072-361-8188</p>
+            </div>
+        </div>
+
+        <div class="contact-info">
+            <div>
+                <h3>診療時間</h3>
+                <p>月～土 9:00～12:00</p>
+                <p>月火水金 16:00～18:00</p>
+            </div>
+            <div>
+                <h3>受付時間</h3>
+                <p>月～土 8:30～11:30</p>
+                <p>月火水金 15:45～17:30</p>
+            </div>
+            <div>
+                <h3>休診日</h3>
+                <p>木曜、土曜午後・日曜日・祝祭</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-success text-white text-center py-3">
         &copy; 2023 松延クリニック
     </footer>
 

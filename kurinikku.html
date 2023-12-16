@@ -1,98 +1,111 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>松延クリニック</title>
+    <!-- Add Bootstrap CDN link -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
+            background-color: #f8f9fa;
+            color: #495057;
         }
 
         header {
             background-color: #4CAF50;
             color: white;
-            padding: 10px;
+            padding: 40px 20px;
             text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 0;
         }
 
         nav {
             display: flex;
-            justify-content: space-around;
-            background-color: #333;
+            justify-content: center;
+            background-color: #343a40;
             padding: 10px;
         }
 
         nav a {
             color: white;
             text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #555;
         }
 
         section {
+            text-align: center;
+            padding: 40px;
+        }
+
+        h2 {
+            color: #4CAF50;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .bg-success {
+            background-color: #28a745;
+            color: white;
             padding: 20px;
+            border-radius: 5px;
+        }
+
+        .bg-light {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        .medical-service {
+            margin-bottom: 30px;
+        }
+
+        .card {
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+
+        .card-header {
+            background-color: #007bff;
+            color: white;
+            border-radius: 5px 5px 0 0;
+        }
+
+        #map {
+            height: 100px;
+            border-radius: 10px;
         }
 
         footer {
             background-color: #4CAF50;
             color: white;
             text-align: center;
-            padding: 10px;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-
-        #map {
-            height: 300px;
-            width: 100%;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            margin-top: 20px;
-        }
-
-        .contact-info {
-            display: flex;
-            justify-content: space-between;
-        }
-
-        .contact-info div {
-            width: 30%;
-        }
-
-        form {
-            display: flex;
-            flex-direction: column;
-            width: 50%;
-            margin: auto;
-        }
-
-        form input,
-        form textarea,
-        form select {
-            margin-bottom: 10px;
-            padding: 8px;
-        }
-
-        form button {
-            background-color: #4CAF50;
-            color: white;
-            padding: 10px;
-            cursor: pointer;
-        }
-
-        #clinic-info {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 20px;
-        }
-
-        #clinic-info div {
-            width: 30%;
+            padding: 20px;
         }
     </style>
 </head>
+
 <body>
 
     <header>
@@ -109,18 +122,74 @@
                     <a class="nav-link" href="hospital.html">診療科目</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="staffu.html">スタッフ</a>
-                </li>
-                <li class="nav-item">
                     <a class="nav-link" href="map.html">アクセス</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="yoyaku.html">予約</a>
+                    <a class="nav-link" href="https://miharakawa-cl.mdja.jp/">予約</a>
                 </li>
             </ul>
         </div>
     </nav>
 
+    <section>
+        <h2>ホーム</h2>
+        <p>正確な診療、わかりやすい説明、気さくで話しやすいクリニック</p>
+        <p>松延クリニックへようこそ！</p>
+
+        <div class="bg-success text-white p-4 mt-4">
+            <p class="font-weight-bold" style="font-size: 20px;">I support the smile of people</p>
+            <p>皆様の笑顔をこれからも応援してまいります！</p>
+            <p>お子様からお年寄りまで地域の皆様に、わかりやすく信頼される医療提供を目標としております。</p>
+        </div>
+
+        <div class="bg-light p-4 mt-4 text-left">
+            <p>これまで、多くの患者様の様々な症状に対して携わってまいりました。「患者さんにとって本当に喜んでいただける医療。そして安心して相談いただけるかかりつけ医」を目標として川口クリニックは皆様に適した治療や相談を行っていきたいと思います。内科　整形外科　婦人科　リハビリテーション科を専門としていますが、専門外の領域に関しましても、これまでの様々な現場での経験を生かして、広く皆様のお役に立ってゆきたいと思います。お気軽にご相談、ご来院ください。</p>
+        </div>
+    </section>
+    <section>
+        <h2>診療科目</h2>
+
+        <div class="medical-services row">
+            <div class="medical-service col-md-6">
+                <div class="card">
+                    <div class="card-header bg-info text-white">
+                        <h3 class="mb-0">肺炎予防ワクチン</h3>
+                    </div>
+                    <div class="card-body">
+                        <p>肺炎予防ワクチンは、高齢者や免疫不全状態の方にお勧めです。予防接種により、重症化を予防しましょう。</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="medical-service col-md-6">
+                <div class="card">
+                    <div class="card-header bg-info text-white">
+                        <h3 class="mb-0">一般内科</h3>
+                    </div>
+                    <div class="card-body">
+                        <p>一般内科では、慢性疾患から急な症状まで幅広く診療しています。</p>
+                        <h3>診療科目のタイトル</h3>
+                        <p>診療科目の説明や詳細な情報をここに追加します。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="container mt-4">
+        <div class="card">
+            <div class="card-header bg-info text-white">
+                <h5 class="mb-0">クリニックの場所</h5>
+            </div>
+            <div class="card-body">
+                <!-- Replace the iframe with a div for Leaflet map -->
+                <div id="map" class="mb-4"></div>
+
+                <!-- Add your Google Maps iframe here -->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3286.6754727294765!2d135.55708037563497!3d34.536449192008455!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000d9d46b99b1b9%3A0x7aa8464b224b585f!2z44CSNTg3LTAwMDIg5aSn6Ziq5bqc5aC65biC576O5Y6f5Yy66buS5bGx77yU77yR77yZ4oiS77yR!5e0!3m2!1sja!2sjp!4v1702369353285!5m2!1sja!2sjp" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+            </div>
+        </div>
+    </div>
     <section>
         <h2>お問い合わせ</h2>
 
@@ -166,43 +235,19 @@
                 <p>木曜、土曜午後・日曜日・祝祭</p>
             </div>
         </div>
-
-        <div id="map"></div>
-
-        <form>
-            <label for="name">お名前</label>
-            <input type="text" id="name" name="name" required>
-
-            <label for="email">メールアドレス</label>
-            <input type="email" id="email" name="email" required>
-
-            <label for="message">メッセージ</label>
-            <textarea id="message" name="message" rows="4" required></textarea>
-
-            <button type="submit">送信</button>
-        </form>
     </section>
 
-    <footer>
+    <footer class="bg-success text-white text-center py-3">
         &copy; 2023 松延クリニック
     </footer>
 
-    <script>
-        function initMap() {
-            var clinicLocation = { lat: 34.5142, lng: 135.5469 }; // Replace with actual coordinates
-            var map = new google.maps.Map(document.getElementById('map'), {
-                zoom: 15,
-                center: clinicLocation
-            });
-            var marker = new google.maps.Marker({
-                position: clinicLocation,
-                map: map,
-                title: '松延クリニック'
-            });
-        }
-    </script>
+    <!-- Include Bootstrap JS and Popper.js -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-    <script defer src="hAIzaSyAowzMPejNJE9AzMQL5T6DhB8Lz6KhT80M"></script>
+    <!-- Include any necessary scripts for the home page here -->
 
 </body>
+
 </html>
