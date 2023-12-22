@@ -6,14 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>川口クリニック</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Quicksand:wght@300;400;500;700&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: 'Quicksand', sans-serif;
+            font-family: 'Playfair Display', serif;
             margin: 0;
             padding: 0;
-            background-color: #f8f9fa;
+            background-color: #f9faf8;
             color: #333;
+            letter-spacing: 1px;
         }
 
         header {
@@ -22,26 +23,28 @@
             padding: 40px 20px;
             text-align: center;
             border-bottom: 2px solid #27ae60;
+            margin-bottom: 40px; /* Increased margin-bottom for better spacing */
         }
 
         h1 {
-            font-size: 3em;
-            margin-bottom: 0;
+            font-family: 'Playfair Display', serif; /* Stylish font */
+            font-size: 4em;
+            margin-bottom: 10px; /* Increased margin-bottom */
         }
 
         nav {
             display: flex;
             justify-content: center;
             background-color: #3498db;
-            padding: 10px;
+            padding: 15px;
         }
 
         nav a {
             color: white;
             text-decoration: none;
-            padding: 10px 20px;
-            margin: 0 10px;
-            border-radius: 5px;
+            padding: 15px 25px;
+            margin: 0 15px;
+            border-radius: 8px;
             transition: background-color 0.3s ease;
         }
 
@@ -59,28 +62,31 @@
         }
 
         p {
-            font-size: 18px;
-            line-height: 1.6;
+            font-size: 20px;
+            line-height: 1.8;
             color: #555;
+            margin-bottom: 20px; /* Increased margin-bottom for better spacing */
         }
 
         .bg-success {
             background-color: #27ae60;
             color: white;
-            padding: 20px;
-            border-radius: 5px;
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 30px; /* Increased margin-bottom */
         }
 
         .bg-light {
             background-color: #ecf0f1;
-            padding: 20px;
-            border-radius: 5px;
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 30px; /* Increased margin-bottom */
         }
 
         .medical-service {
             margin-bottom: 30px;
             border: 1px solid #ddd;
-            border-radius: 5px;
+            border-radius: 10px;
             overflow: hidden;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease;
@@ -92,15 +98,16 @@
 
         .card {
             border: none;
-            border-radius: 10px;
+            border-radius: 15px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            margin-top: 20px;
+            margin-top: 30px;
         }
 
         .card-header {
             background-color: #3498db;
             color: white;
-            border-radius: 5px 5px 0 0;
+            border-radius: 10px 10px 0 0;
+            padding: 20px;
         }
 
         #map {
@@ -119,6 +126,7 @@
         }
     </style>
 </head>
+
 
 <body>
 
@@ -201,8 +209,6 @@
         </div>
     </div>
     <section>
-        <h2>お問い合わせ</h2>
-
         <div class="contact-info">
             <div>
                 <h3>電話番号</h3>
