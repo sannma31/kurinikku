@@ -5,12 +5,109 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>川口クリニック</title>
-    <!-- Include Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Quicksand:wght@300;400;500;700&display=swap" rel="stylesheet">
     <style>
         body {
+            font-family: 'Playfair Display', serif;
             margin: 0;
             padding: 0;
+            background-color: #f9faf8;
+            color: #333;
+            letter-spacing: 1px;
+        }
+
+        header {
+            background-color: #2ecc71;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            border-bottom: 2px solid #27ae60;
+            margin-bottom: 40px; /* Increased margin-bottom for better spacing */
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif; /* Stylish font */
+            font-size: 4em;
+            margin-bottom: 10px; /* Increased margin-bottom */
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #3498db;
+            padding: 15px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 15px 25px;
+            margin: 0 15px;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #2980b9;
+        }
+
+        section {
+            text-align: center;
+            padding: 40px;
+        }
+
+        h2 {
+            color: #2ecc71;
+        }
+
+        p {
+            font-size: 20px;
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 20px; /* Increased margin-bottom for better spacing */
+        }
+
+        .bg-success {
+            background-color: #27ae60;
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 30px; /* Increased margin-bottom */
+        }
+
+        .bg-light {
+            background-color: #ecf0f1;
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 30px; /* Increased margin-bottom */
+        }
+
+        .medical-service {
+            margin-bottom: 30px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .medical-service:hover {
+            transform: scale(1.05);
+        }
+
+        .card {
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-top: 30px;
+        }
+
+        .card-header {
+            background-color: #3498db;
+            color: white;
+            border-radius: 10px 10px 0 0;
+            padding: 20px;
         }
 
         #map {
@@ -18,17 +115,25 @@
             width: 60%;
         }
 
-        .navbar {
-            margin-bottom: 20px; /* Adjusted margin for better spacing */
-        }
-
-        .card {
-            margin-top: 20px; /* Adjusted margin for better spacing */
+        footer {
+            background-color: #2ecc71;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
         }
     </style>
 </head>
 
-<body class="bg-light">
+
+<body>
+
+    <header>
+        <h1>川口クリニック</h1>
+    </header>
+
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="collapse navbar-collapse">
             <ul class="navbar-nav">
@@ -47,53 +152,54 @@
             </ul>
         </div>
     </nav>
-    <div class="container">
+    <div class="container mt-4">
         <div class="card">
             <div class="card-header bg-info text-white">
                 <h5 class="mb-0">クリニックの場所</h5>
             </div>
             <div class="card-body">
-                <!-- Replace the iframe with a div for Leaflet map -->
                 <div id="map" class="mb-4"></div>
 
-                <!-- Add your Google Maps iframe here -->
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3286.6754727294765!2d135.55708037563497!3d34.536449192008455!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000d9d46b99b1b9%3A0x7aa8464b224b585f!2z44CSNTg3LTAwMDIg5aSn6Ziq5bqc5aC65biC576O5Y6f5Yy66buS5bGx77yU77yR77yZ4oiS77yR!5e0!3m2!1sja!2sjp!4v1702369353285!5m2!1sja!2sjp" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
             </div>
         </div>
-        <section>
-            <div class="contact-info">
-                <div>
-                    <h3>電話番号</h3>
-                    <p>012-3456-7890</p>
-                </div>
-                <div>
-                    <h3>受付時間</h3>
-                    <p>月～土 9:45～12:30</p>
-                    <p>月火水金 15:45～17:30</p>
-                </div>
-                <div>
-                    <h3>休診日</h3>
-                    <p>火曜午後・木曜午後・土曜午後・日祝日</p>
-                </div>
-            </div>
-        
-            <div class="contact-info">
-                <div>
-                    <h3>WEBの受付時間</h3>
-                    <p>10:00～12:00</p>
-                    <p>16:00～17:00</p>
-                </div>
-        </section>
     </div>
+    <section>
+        <div class="contact-info">
+            <div>
+                <h3>電話番号</h3>
+                <p>012-3456-7890</p>
+            </div>
+            <div>
+                <h3>受付時間</h3>
+                <p>月～土 9:45～12:30</p>
+                <p>月火水金 15:45～17:30</p>
+            </div>
+            <div>
+                <h3>休診日</h3>
+                <p>火曜午後・木曜午後・土曜午後・日祝日</p>
+            </div>
+        </div>
+    
+        <div class="contact-info">
+            <div>
+                <h3>WEBの受付時間</h3>
+                <p>10:00～12:00</p>
+                <p>16:00～17:00</p>
+            </div>
+    </section>
 
-    <!-- Include Bootstrap JS and Popper.js -->
+    <footer class="bg-success text-white text-center py-3">
+        &copy; 2023 川口クリニック
+    </footer>
+
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script
 
-    <!-- Include Leaflet JS -->
-    <!-- Add your Leaflet map script here -->
+    <!-- Include any necessary scripts for the home page here -->
+
 </body>
 
 </html>
